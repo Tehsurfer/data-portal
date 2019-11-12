@@ -120,6 +120,10 @@
 	border: none;
 }
 
+.ui-widget-content{
+  background: white;
+}
+
 ui-widget-content {
 	border: none;
 }
