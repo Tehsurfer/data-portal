@@ -33,8 +33,8 @@
               </a>
             </el-col>
             <el-col class="contact" :md="5">
-              <h4>Help Us Improve</h4>
-              <a href="https://www.wrike.com/form/eyJhY2NvdW50SWQiOjMyMDM1ODgsInRhc2tGb3JtSWQiOjI2NzEzMn0JNDcyNTk5ODQyNjYyOAllODRhYTBkZWQ2ODY2Y2U3OWNhZWI5ODkyZWMwNjgyNTBiZjExMDIzMjk4MGMxZGM1MGNhYzY0ZmQxOGMxN2Ji">Website feedback</a>
+              <h4 @click="openInTab(wrikeURL)">Help Us Improve</h4>
+              <a href="#" @click="openInTab(wrikeURL)">Website feedback</a>
             </el-col>
             <el-col class="contact" :md="5">
               <h4>Stay Up-To-Date: Subscribe</h4>
@@ -174,8 +174,14 @@ export default {
     footerEmailAddress,
     footerTwitterHandle,
     footerFacebookHandle,
-    isContactModalVisible: false
-  })
+    isContactModalVisible: false,
+    wrikeURL: 'https://www.wrike.com/form/eyJhY2NvdW50SWQiOjMyMDM1ODgsInRhc2tGb3JtSWQiOjI2NzEzMn0JNDcyNTk5ODQyNjYyOAllODRhYTBkZWQ2ODY2Y2U3OWNhZWI5ODkyZWMwNjgyNTBiZjExMDIzMjk4MGMxZGM1MGNhYzY0ZmQxOGMxN2Ji'
+  }),
+  methods: {
+    openInTab: function (url) {
+      window.open(url, '_blank').focus();
+    }
+  }
 };
 </script>
 
